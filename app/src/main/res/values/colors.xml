@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_blank">#424242</color>
+
+    <color name="sample_red">#f44336</color>
+    <color name="sample_blue">#03a9f4</color>
+    <color name="sample_green">#8bc34a</color>
+    <color name="sample_yellow">#ff9800</color>
+
+    <!-- theme colors -->
+    <color name="color_primary">#90a4ae</color>
+    <color name="color_primary_dark">#62757f</color>
+    <color name="color_background">#cfd8dc</color>
+
+    <color name="theme_red_primary">#f44336</color>
+    <color name="theme_red_primary_dark">#ba000d</color>
+    <color name="theme_red_background">#ffcdd2</color>
+
+    <color name="theme_blue_primary">#2196f3</color>
+    <color name="theme_blue_primary_dark">#0069c0</color>
+    <color name="theme_blue_background">#bbdefb</color>
+
+    <color name="theme_green_primary">#4caf50</color>
+    <color name="theme_green_primary_dark">#087f23</color>
+    <color name="theme_green_background">#c8e6c9</color>
+
+    <color name="theme_yellow_primary">#ffeb3b</color>
+    <color name="theme_yellow_primary_dark">#c8b900</color>
+    <color name="theme_yellow_background">#fff9c4</color>
+
+    <color name="theme_purple_primary">#9c27b0</color>
+    <color name="theme_purple_primary_dark">#6a0080</color>
+    <color name="theme_purple_background">#e1bee7</color>
+</resources>

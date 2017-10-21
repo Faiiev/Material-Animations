@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="revealSample"
+            type="com.ministren.material_animations.model.Sample" />
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.RevealActivity">
+
+        <android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/appbar_reveal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar_reveal"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/colorPrimary"
+                    app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                    <TextView
+                        android:id="@+id/toolbar_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{revealSample.name}"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:text="Title" />
+
+                </android.support.v7.widget.Toolbar>
+
+                <ImageView
+                    android:id="@+id/shared_target"
+                    style="@style/AppTheme.Icon.Small"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_circle_24dp"
+                    android:tint="@{revealSample.color}"
+                    android:transitionName="@string/transition_reveal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/reveal_root_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/activity_reveal_description"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RelativeLayout
+                android:id="@+id/reveal_buttons_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_description">
+
+                <ImageView
+                    android:id="@+id/image_circle_red"
+                    style="@style/AppTheme.Icon.Medium.Scaled"
+                    android:src="@drawable/ic_circle_24dp"
+                    android:tint="@color/sample_red"
+                    tools:alpha="1" />
+
+                <ImageView
+                    android:id="@+id/image_circle_blue"
+                    style="@style/AppTheme.Icon.Medium.Scaled"
+                    android:layout_toEndOf="@id/image_circle_red"
+                    android:src="@drawable/ic_circle_24dp"
+                    android:tint="@color/sample_blue"
+                    tools:alpha="1" />
+
+                <ImageView
+                    android:id="@+id/image_circle_green"
+                    style="@style/AppTheme.Icon.Medium.Scaled"
+                    android:layout_toEndOf="@id/image_circle_blue"
+                    android:src="@drawable/ic_circle_24dp"
+                    android:tint="@color/sample_green"
+                    tools:alpha="1" />
+
+                <ImageView
+                    android:id="@+id/image_circle_yellow"
+                    style="@style/AppTheme.Icon.Medium.Scaled"
+                    android:layout_toEndOf="@id/image_circle_green"
+                    android:src="@drawable/ic_circle_24dp"
+                    android:tint="@color/sample_yellow"
+                    tools:alpha="1" />
+
+            </RelativeLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</layout>

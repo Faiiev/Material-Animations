@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Material Animations</string>
+
+    <string name="transition_circle_red">circle_red</string>
+    <string name="transition_circle_blue">circle_blue</string>
+    <string name="transition_circle_green">circle_green</string>
+    <string name="transition_title">transition_title</string>
+    <string name="transition_reveal">transition_reveal</string>
+
+    <string name="text_long">Bacon ipsum dolor amet cupidatat bresaola minim, aliquip beef aute ea porchetta. Meatball brisket do, rump in beef ea ham hock spare ribs mollit qui dolore ipsum voluptate cow. Drumstick prosciutto salami duis jerky jowl. Mollit ball tip short ribs doner fugiat frankfurter leberkas andouille kevin pork loin nostrud ham culpa. Rump pariatur ham hock excepteur picanha pork. Corned beef flank proident shankle rump.</string>
+    <string name="text_medium">Porchetta landjaeger tail meatball t-bone spare ribs. Sirloin pork chop bacon pork belly strip steak. Porchetta ham meatball pig salami short ribs jowl spare ribs sirloin tongue jerky cupim chuck.</string>
+
+    <string name="reveal_body1">View layout change animation with Circular Reveal Animation on finish.</string>
+    <string name="reveal_body2">Circular Reveal Animation from top with nested animations on end.</string>
+    <string name="reveal_body3">Circular Reveal Animation starting from the center of target view.</string>
+    <string name="reveal_body4">Circular Reveal Animation starting from touch coordinates.</string>
+
+    <string name="activity_transition1_description">This activity defines a Explode Enter Transition programmatically. Transitions can be defined either on code or on xml resource files.</string>
+    <string name="activity_transition1_btn_explode_code">Explode (Code)</string>
+    <string name="activity_transition1_btn_explode_xml">Explode (XML)</string>
+    <string name="activity_transition1_btn_slide_code">Slide (Code)</string>
+    <string name="activity_transition1_btn_slide_xml">Slide (XML)</string>
+    <string name="activity_transition1_btn_exit">Exit</string>
+    <string name="activity_transition1_btn_exit_override">Exit (overriding return transition)</string>
+
+    <string name="activity_transition2_title">Explode</string>
+    <string name="activity_transition2_btn_exit">Exit</string>
+
+    <string name="activity_transition3_title">Slide</string>
+    <string name="activity_transition3_btn_exit">Exit</string>
+
+    <string name="activity_shared_element_description">Toolbar title is a shared element between MainActivity and this activity.</string>
+
+    <string name="fragment_shared_element_1_title">Fragment 1</string>
+    <string name="fragment_shared_element_1_description">Blue circle is a shared element between MainActivity and this fragment.</string>
+    <string name="fragment_shared_element_1_btn_next_overlap_false">Next (Overlap transition = false)</string>
+    <string name="fragment_shared_element_1_btn_next_overlap_true">Next (Overlap transition = true)</string>
+
+    <string name="fragment_shared_element_2_title">Fragment 2</string>
+    <string name="fragment_shared_element_2_description">When overlap is true, the enter transition will start as soon as possible. When overlap is false, the enter transition will wait until the exit transition completes before starting.</string>
+
+    <string name="activity_animations1_title">Animations</string>
+    <string name="activity_animations1_description">Sample Activity demonstrating how to use TransitionManager to animate different view properties.</string>
+    <string name="activity_animations1_btn_change_size">Change size</string>
+    <string name="activity_animations1_btn_change_position">Change position</string>
+    <string name="activity_animations1_btn_next">Next (Scenes)</string>
+
+    <string name="activity_animations2_btn_scene_1">Scene one</string>
+    <string name="activity_animations2_btn_scene_2">Scene two</string>
+    <string name="activity_animations2_btn_scene_3">Scene three</string>
+    <string name="activity_animations2_btn_scene_4">Scene four</string>
+
+    <string name="animations_scene0_title">Scenes store the state of a view hierarchy, including all its views and their property values. The transitions framework can run animations between a starting and an ending scene.</string>
+
+    <string name="activity_reveal_description">Sample Activity demonstrating how to create different CircularReveal animations.</string>
+</resources>
