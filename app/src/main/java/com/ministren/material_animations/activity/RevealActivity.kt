@@ -5,6 +5,7 @@ import android.animation.AnimatorListenerAdapter
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.annotation.ColorRes
+import android.support.constraint.ConstraintSet
 import android.support.v4.content.ContextCompat
 import android.transition.Fade
 import android.transition.Transition
@@ -18,7 +19,6 @@ import android.view.animation.AccelerateDecelerateInterpolator
 import android.view.animation.AccelerateInterpolator
 import android.view.animation.AnimationUtils
 import android.view.animation.Interpolator
-import android.widget.RelativeLayout
 
 import com.ministren.material_animations.R
 import com.ministren.material_animations.databinding.ActivityRevealBinding
@@ -69,14 +69,15 @@ class RevealActivity : BaseDetailActivity() {
     }
 
     private fun revealRed() {
-        val savedParams = image_circle_red.layoutParams
+        val savedConstraints = ConstraintSet()
+        savedConstraints.clone(reveal_buttons_view)
 
         val transition = TransitionInflater.from(this).inflateTransition(R.transition.changebounds_with_arcmotion)
         transition.addListener(object : Transition.TransitionListener {
             override fun onTransitionEnd(transition: Transition?) {
                 animateRevealColor(reveal_root_view, R.color.sample_red)
                 tv_description.setText(R.string.reveal_body1)
-                image_circle_red.layoutParams = savedParams
+                savedConstraints.applyTo(reveal_buttons_view)
             }
 
             override fun onTransitionResume(transition: Transition?) {}
@@ -86,9 +87,10 @@ class RevealActivity : BaseDetailActivity() {
         })
         TransitionManager.beginDelayedTransition(reveal_root_view, transition)
 
-        val layoutParams = RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT)
-        layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT)
-        image_circle_red.layoutParams = layoutParams
+        val constraintSet = ConstraintSet()
+        constraintSet.clone(savedConstraints)
+        constraintSet.centerVertically(R.id.image_circle_red, R.id.reveal_buttons_view)
+        constraintSet.applyTo(reveal_buttons_view)
     }
 
     private fun revealBlue() {

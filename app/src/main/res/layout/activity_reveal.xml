@@ -78,12 +78,10 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <RelativeLayout
+            <android.support.constraint.ConstraintLayout
                 android:id="@+id/reveal_buttons_view"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_marginTop="8dp"
-                android:gravity="center_horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -94,6 +92,9 @@
                     style="@style/AppTheme.Icon.Medium.Scaled"
                     android:src="@drawable/ic_circle_24dp"
                     android:tint="@color/sample_red"
+                    app:layout_constraintEnd_toStartOf="@+id/image_circle_blue"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
                     tools:alpha="1" />
 
                 <ImageView
@@ -102,6 +103,9 @@
                     android:layout_toEndOf="@id/image_circle_red"
                     android:src="@drawable/ic_circle_24dp"
                     android:tint="@color/sample_blue"
+                    app:layout_constraintEnd_toStartOf="@+id/image_circle_green"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/image_circle_red"
                     tools:alpha="1" />
 
                 <ImageView
@@ -110,6 +114,9 @@
                     android:layout_toEndOf="@id/image_circle_blue"
                     android:src="@drawable/ic_circle_24dp"
                     android:tint="@color/sample_green"
+                    app:layout_constraintEnd_toStartOf="@+id/image_circle_yellow"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/image_circle_blue"
                     tools:alpha="1" />
 
                 <ImageView
@@ -118,9 +125,12 @@
                     android:layout_toEndOf="@id/image_circle_green"
                     android:src="@drawable/ic_circle_24dp"
                     android:tint="@color/sample_yellow"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/image_circle_green"
                     tools:alpha="1" />
 
-            </RelativeLayout>
+            </android.support.constraint.ConstraintLayout>
 
         </android.support.constraint.ConstraintLayout>
 
