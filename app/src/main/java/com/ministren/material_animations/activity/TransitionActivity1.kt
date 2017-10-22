@@ -51,15 +51,15 @@ class TransitionActivity1 : BaseDetailActivity() {
             transitionTo(intent)
         }
         btn_exit.setOnClickListener {
-            val returnTransition = buildReturnTransition()
-            window.returnTransition = returnTransition
-            finishAfterTransition()
-        }
-        btn_exit_override.setOnClickListener {
             /**
              * If no return transition is defined Android will use reversed enter transition
              * In this case, return transition will be a reversed Slide (defined in buildEnterTransition)
              */
+            finishAfterTransition()
+        }
+        btn_exit_override.setOnClickListener {
+            val returnTransition = buildReturnTransition()
+            window.returnTransition = returnTransition
             finishAfterTransition()
         }
     }
