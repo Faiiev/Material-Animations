@@ -28,9 +28,7 @@ import kotlinx.android.synthetic.main.activity_reveal.*
 
 class RevealActivity : BaseDetailActivity() {
 
-    companion object {
-        private val DELAY = 100
-    }
+    private val DELAY = 100L
 
     private lateinit var mInterpolator: Interpolator
 
@@ -150,7 +148,7 @@ class RevealActivity : BaseDetailActivity() {
         for (i in 0 until reveal_buttons_view.childCount) {
             val child = reveal_buttons_view.getChildAt(i)
             child.animate()
-                    .setStartDelay(100L + i * DELAY)
+                    .setStartDelay(100 + i * DELAY)
                     .setInterpolator(mInterpolator)
                     .alpha(1f)
                     .scaleX(1f)

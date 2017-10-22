@@ -12,14 +12,13 @@ import android.view.ViewGroup
 import android.widget.ImageView
 
 import com.ministren.material_animations.R
+import com.ministren.material_animations.activity.BaseDetailActivity.Companion.EXTRA_SAMPLE
 import com.ministren.material_animations.databinding.FragmentSharedElement1Binding
 import com.ministren.material_animations.model.Sample
 
 class SharedElementFragment1 : Fragment() {
 
     companion object {
-        val EXTRA_SAMPLE = "sample"
-
         fun newInstance(sample: Sample): SharedElementFragment1 {
             val fragment = SharedElementFragment1()
             val args = Bundle()

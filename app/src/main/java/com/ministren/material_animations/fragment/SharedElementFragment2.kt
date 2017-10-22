@@ -8,14 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.ministren.material_animations.R
+import com.ministren.material_animations.activity.BaseDetailActivity.Companion.EXTRA_SAMPLE
 import com.ministren.material_animations.databinding.FragmentSharedElement2Binding
 import com.ministren.material_animations.model.Sample
 
 class SharedElementFragment2 : Fragment() {
 
     companion object {
-        val EXTRA_SAMPLE = "sample"
-
         fun newInstance(sample: Sample): SharedElementFragment2 {
             val fragment = SharedElementFragment2()
             val args = Bundle()
