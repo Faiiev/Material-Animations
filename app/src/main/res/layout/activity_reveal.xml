@@ -39,7 +39,6 @@
                         android:layout_height="wrap_content"
                         android:text="@{revealSample.name}"
                         android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
-                        tools:layout_editor_absoluteX="16dp"
                         tools:text="Title" />
 
                 </android.support.v7.widget.Toolbar>

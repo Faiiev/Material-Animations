@@ -22,6 +22,7 @@
             style="@style/AppTheme.Icon.Small"
             android:src="@drawable/ic_circle_24dp"
             android:tint="@{sample.color}"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,12 +30,12 @@
             android:id="@+id/sample_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:text="@{sample.name}"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            app:layout_constraintBottom_toBottomOf="@+id/sample_icon"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/sample_icon"
-            app:layout_constraintTop_toTopOf="@+id/sample_icon"
+            app:layout_constraintTop_toTopOf="parent"
             tools:text="View animations sample" />
 
     </android.support.constraint.ConstraintLayout>
